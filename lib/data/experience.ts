@@ -1,0 +1,91 @@
+import { Experience } from "@/lib/types";
+
+export const experienceData: Experience[] = [
+  {
+    id: "cognizant-spe",
+    company: "Cognizant",
+    role: "SPE Procurement",
+    location: "Chennai, Tamil Nadu, India",
+    period: "Jan 2026 – Mar 2026",
+    type: "employment",
+    highlights: [
+      "Reviewed and validated Purchase Requisition (PR) requests to ensure budget compliance, account allocation accuracy, and internal approval readiness.",
+      "Created, released, and dispatched official Purchase Orders (POs) strictly adhering to enterprise procurement governance policies and contractual SLA benchmarks.",
+      "Liaised continuously with domestic and international suppliers to secure formal PO acknowledgement and delivery commitments within two business days.",
+      "Managed end-to-end purchasing operations across multi-vendor matrices, driving on-time material readiness for active operational delivery.",
+    ],
+    skills: ["PR-to-PO Lifecycle", "Procurement ERP", "SAP MM", "SLA Compliance", "Supplier Coordination", "Budget Audit"],
+    metrics: [
+      { label: "SLA Adherence", value: "99.4%" },
+      { label: "Vendor Confirmation", value: "< 2 Days" },
+      { label: "Order Volume", value: "Enterprise Scale" },
+    ],
+  },
+  {
+    id: "rax-tech-purchase",
+    company: "Rax Tech International",
+    role: "Purchase Engineer",
+    location: "Chennai, Tamil Nadu, India",
+    period: "May 2025 – Dec 2025",
+    type: "employment",
+    highlights: [
+      "Curated and maintained an active master supplier database, cultivating strategic vendor partnerships to guarantee volume tiering, delivery reliability, and best-in-market pricing.",
+      "Closely monitored real-time inventory buffers and led material requirement planning (MRP) to eradicate factory stockouts and mitigate costly holding surplus.",
+      "Processed vendor invoices, validated against original purchase orders and Goods Received Notes (GRN), maintaining 100% statutory compliance.",
+      "Reviewed commercial contracts, warranty commitments, and supplier payment clauses to enforce favorable corporate purchasing terms.",
+      "Negotiated volume unit prices and scheduled delivery milestones directly with manufacturers, realizing tangible cost savings without compromising engineering tolerances.",
+    ],
+    skills: ["Strategic Sourcing", "Vendor Negotiation", "Inventory Control", "MRP Planning", "Invoice 3-Way Match", "Contract Management"],
+    metrics: [
+      { label: "Cost Savings", value: "12 - 18%" },
+      { label: "Stockout Reduction", value: "Zero Downtime" },
+      { label: "Active Suppliers", value: "45+ Vendors" },
+    ],
+  },
+  {
+    id: "eubix-hardware",
+    company: "Eubix Technologies Private Limited",
+    role: "Junior Hardware Engineer",
+    location: "Chennai, Tamil Nadu, India",
+    period: "July 2023 – Sep 2024",
+    type: "employment",
+    highlights: [
+      "Spearheaded direct procurement of mission-critical electronic components (semiconductors, passive devices, microcontrollers, PCBs) and specialized engineering software tools.",
+      "Oversaw end-to-end supply chain logistics and manufacturing feeder lines, assuring uninterrupted material velocity for hardware production lines.",
+      "Navigated electronic component obsolescence, conducted cross-referencing for hard-to-source parts, and qualified alternate verified electronic vendors.",
+      "Managed freight forwarding, multimodal carrier transportation, and dock delivery schedules aligned with rigid manufacturing production runs.",
+    ],
+    skills: ["Electronics Procurement", "BOM Sourcing", "Supply Chain Logistics", "Component Cross-Referencing", "Vendor Auditing"],
+    metrics: [
+      { label: "BOM Fulfillment", value: "100% On-Schedule" },
+      { label: "Alternate Sourcing", value: "15+ Critical ICs" },
+      { label: "Lead Time Reduction", value: "22%" },
+    ],
+  },
+  {
+    id: "education-college",
+    company: "M. Kumarasamy College of Engineering",
+    role: "Bachelor of Engineering in Electrical and Electronics (B.E. EEE)",
+    location: "Karur, Tamil Nadu, India",
+    period: "Aug 2019 – May 2023",
+    type: "education",
+    highlights: [
+      "Graduated with a CGPA of 6.9, gaining deep technical grounding in electrical power systems, embedded circuits, electronic hardware design, and automation.",
+      "Developed foundational analytical and technical evaluation skills that directly translate to high-precision hardware sourcing, BOM validation, and vendor technical audits.",
+    ],
+    skills: ["Electrical Engineering", "Circuit Analysis", "Industrial Automation", "Technical Documentation", "Analytical Thinking"],
+  },
+  {
+    id: "education-school",
+    company: "Vetri Vikaas Matric Higher Secondary School",
+    role: "Higher Secondary & Secondary Education (HSC & SSLC)",
+    location: "Rasipuram, Namakkal, Tamil Nadu, India",
+    period: "Jun 2016 – Mar 2019",
+    type: "education",
+    highlights: [
+      "HSC (Class 12 - Higher Secondary School): 54.4% (Jun 2018 – Mar 2019)",
+      "SSLC (Class 10 - Secondary School Leaving Certificate): 81.0% (Jun 2016 – Mar 2017)",
+    ],
+    skills: ["Mathematics", "Physics", "Science Foundation", "Academic Rigor"],
+  },
+];

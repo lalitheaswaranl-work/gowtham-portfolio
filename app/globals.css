@@ -1,0 +1,178 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --background: #e8edf5;
+  --foreground: #1e293b;
+  --card-bg: #e8edf5;
+  --card-border: rgba(255, 255, 255, 0.6);
+  --muted: #64748b;
+  --muted-light: #94a3b8;
+  --accent: #2563eb;
+  --accent-soft: rgba(37, 99, 235, 0.1);
+  --emerald: #059669;
+  --emerald-soft: rgba(5, 150, 105, 0.1);
+
+  /* Light Neumorphism Shadows */
+  --neu-shadow-raised: 8px 8px 18px #c5cedd, -8px -8px 18px #ffffff;
+  --neu-shadow-raised-sm: 4px 4px 10px #c5cedd, -4px -4px 10px #ffffff;
+  --neu-shadow-raised-lg: 12px 12px 28px #bac4d4, -12px -12px 28px #ffffff;
+  --neu-shadow-inset: inset 4px 4px 8px #c5cedd, inset -4px -4px 8px #ffffff;
+  --neu-shadow-inset-sm: inset 2px 2px 5px #c5cedd, inset -2px -2px 5px #ffffff;
+  --neu-shadow-pill: 3px 3px 7px #c5cedd, -3px -3px 7px #ffffff;
+  --neu-shadow-pill-active: inset 2px 2px 5px #c5cedd, inset -2px -2px 5px #ffffff;
+  --neu-shadow-button: 6px 6px 14px #c5cedd, -6px -6px 14px #ffffff;
+  --neu-shadow-button-pressed: inset 3px 3px 6px #c5cedd, inset -3px -3px 6px #ffffff;
+}
+
+.dark {
+  color-scheme: dark;
+  --background: #131722;
+  --foreground: #e2e8f0;
+  --card-bg: #161b26;
+  --card-border: rgba(255, 255, 255, 0.05);
+  --muted: #94a3b8;
+  --muted-light: #64748b;
+  --accent: #38bdf8;
+  --accent-soft: rgba(56, 189, 248, 0.12);
+  --emerald: #10b981;
+  --emerald-soft: rgba(16, 185, 129, 0.12);
+
+  /* Dark Neumorphism Shadows */
+  --neu-shadow-raised: 7px 7px 18px #0a0c12, -7px -7px 18px #1e2434;
+  --neu-shadow-raised-sm: 4px 4px 10px #0a0c12, -4px -4px 10px #1e2434;
+  --neu-shadow-raised-lg: 12px 12px 28px #07090e, -12px -12px 28px #222a3d;
+  --neu-shadow-inset: inset 4px 4px 8px #0a0c12, inset -4px -4px 8px #1e2434;
+  --neu-shadow-inset-sm: inset 2px 2px 5px #0a0c12, inset -2px -2px 5px #1e2434;
+  --neu-shadow-pill: 3px 3px 6px #0a0c12, -3px -3px 6px #1e2434;
+  --neu-shadow-pill-active: inset 2px 2px 4px #0a0c12, inset -2px -2px 4px #1e2434;
+  --neu-shadow-button: 5px 5px 12px #0a0c12, -5px -5px 12px #1e2434;
+  --neu-shadow-button-pressed: inset 3px 3px 6px #0a0c12, inset -3px -3px 6px #1e2434;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  min-height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #94a3b8;
+  border-radius: 4px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #334155;
+}
+
+/* Neumorphic tactile utility classes */
+.neu-card {
+  background: var(--card-bg);
+  box-shadow: var(--neu-shadow-raised);
+  border-radius: 1.25rem;
+  border: 1px solid var(--card-border);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.neu-card-sm {
+  background: var(--card-bg);
+  box-shadow: var(--neu-shadow-raised-sm);
+  border-radius: 1rem;
+  border: 1px solid var(--card-border);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.neu-card-lg {
+  background: var(--card-bg);
+  box-shadow: var(--neu-shadow-raised-lg);
+  border-radius: 1.75rem;
+  border: 1px solid var(--card-border);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.neu-inset {
+  background: var(--card-bg);
+  box-shadow: var(--neu-shadow-inset);
+  border-radius: 1rem;
+}
+
+.neu-inset-sm {
+  background: var(--card-bg);
+  box-shadow: var(--neu-shadow-inset-sm);
+  border-radius: 0.75rem;
+}
+
+.neu-btn {
+  background: var(--card-bg);
+  box-shadow: var(--neu-shadow-button);
+  border-radius: 0.875rem;
+  border: 1px solid var(--card-border);
+  transition: all 0.15s ease;
+  user-select: none;
+}
+
+.neu-btn:hover {
+  transform: translateY(-1px);
+}
+
+.neu-btn:active {
+  box-shadow: var(--neu-shadow-button-pressed);
+  transform: translateY(1px);
+}
+
+.neu-btn-primary {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.4), inset 1px 1px 2px rgba(255, 255, 255, 0.35);
+  border-radius: 0.875rem;
+  border: none;
+  transition: all 0.15s ease;
+}
+
+.neu-btn-primary:hover {
+  background: linear-gradient(135deg, #1d4ed8, #1e40af);
+  box-shadow: 0 6px 18px rgba(37, 99, 235, 0.5);
+  transform: translateY(-1px);
+}
+
+.neu-btn-primary:active {
+  box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.4);
+  transform: translateY(1px);
+}
+
+.neu-pill {
+  background: var(--card-bg);
+  box-shadow: var(--neu-shadow-pill);
+  border-radius: 9999px;
+  border: 1px solid var(--card-border);
+  transition: all 0.2s ease;
+}
+
+.neu-pill-active {
+  background: var(--card-bg);
+  box-shadow: var(--neu-shadow-pill-active);
+  border-radius: 9999px;
+}
