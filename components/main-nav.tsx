@@ -65,21 +65,20 @@ export function MainNav() {
   return (
     <header className="sticky top-3 z-40 w-full px-3 sm:px-6 lg:px-8 max-w-7xl mx-auto mb-4">
       <div className="neu-card px-4 py-2.5 sm:px-5 flex items-center justify-between backdrop-blur-md bg-[var(--card-bg)]/95">
-        {/* Brand with 3D G Logo + Profile Avatar */}
+        {/* Brand with Profile Picture as Logo Badge */}
         <Link
           href="/#home"
           onClick={(e) => handleNavClick(e, "home")}
           className="flex items-center gap-3 group focus:outline-none"
         >
-          <BrandLogo size={42} glow />
-          {/* Profile Picture in Header alone */}
-          <div className="relative w-10 h-10 rounded-full neu-inset p-0.5 shrink-0 overflow-hidden hidden sm:block">
+          {/* Profile Picture in Header Left */}
+          <div className="relative w-11 h-11 rounded-2xl neu-card-sm p-0.5 shrink-0 overflow-hidden group-hover:scale-105 transition-transform duration-200">
             <img
               src={profileData.profileImage}
               alt={profileData.name}
-              className="w-full h-full object-cover object-top rounded-full"
+              className="w-full h-full object-cover object-top rounded-xl"
             />
-            <span className="absolute bottom-0 right-0 w-2.5 h-2.5 bg-emerald-500 rounded-full border-2 border-[var(--card-bg)]" />
+            <span className="absolute -top-1 -right-1 w-3 h-3 bg-emerald-500 rounded-full border-2 border-[var(--card-bg)] animate-pulse" />
           </div>
           <div className="flex flex-col">
             <span className="text-sm sm:text-base font-bold text-slate-800 dark:text-slate-100 tracking-tight leading-tight group-hover:text-blue-600 dark:group-hover:text-sky-400 transition-colors">
