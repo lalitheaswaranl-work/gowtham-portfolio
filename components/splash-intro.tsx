@@ -138,15 +138,11 @@ export function SplashIntro() {
       >
         {/* Responsive 3D "G" Brand Logo */}
         <div className="relative">
-          <div className="block sm:hidden">
-            <BrandLogo size={96} glow={!isZooming} />
-          </div>
-          <div className="hidden sm:block md:hidden">
-            <BrandLogo size={118} glow={!isZooming} />
-          </div>
-          <div className="hidden md:block">
-            <BrandLogo size={138} glow={!isZooming} />
-          </div>
+          <BrandLogo
+            size={136}
+            glow={!isZooming}
+            className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 lg:w-36 lg:h-36 drop-shadow-[0_16px_36px_rgba(37,99,235,0.45)]"
+          />
         </div>
 
         {/* Candidate Identifier Typography */}

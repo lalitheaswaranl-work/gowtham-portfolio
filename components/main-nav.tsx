@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { BrandLogo } from "@/components/brand-logo";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { useState, useEffect } from "react";
 import { Menu, X, FileText, Send } from "lucide-react";
@@ -71,14 +70,14 @@ export function MainNav() {
           onClick={(e) => handleNavClick(e, "home")}
           className="flex items-center gap-3 group focus:outline-none"
         >
-          {/* Profile Picture in Header Left */}
-          <div className="relative w-11 h-11 rounded-2xl neu-card-sm p-0.5 shrink-0 overflow-hidden group-hover:scale-105 transition-transform duration-200">
+          {/* Profile Picture in Header Left - Clean Circular Shape */}
+          <div className="relative w-11 h-11 rounded-full neu-inset p-0.5 shrink-0 group-hover:scale-105 transition-transform duration-200 ring-2 ring-blue-500/25 dark:ring-sky-400/25 group-hover:ring-blue-500/60">
             <img
               src={profileData.profileImage}
               alt={profileData.name}
-              className="w-full h-full object-cover object-top rounded-xl"
+              className="w-full h-full object-cover object-top rounded-full"
             />
-            <span className="absolute -top-1 -right-1 w-3 h-3 bg-emerald-500 rounded-full border-2 border-[var(--card-bg)] animate-pulse" />
+            <span className="absolute bottom-0 right-0 w-3 h-3 bg-emerald-500 rounded-full border-2 border-[var(--card-bg)] shadow-sm animate-pulse" />
           </div>
           <div className="flex flex-col">
             <span className="text-sm sm:text-base font-bold text-slate-800 dark:text-slate-100 tracking-tight leading-tight group-hover:text-blue-600 dark:group-hover:text-sky-400 transition-colors">
